@@ -68,7 +68,7 @@ NavBar.propTypes = {
 const rules = {
     nav: () => ({
         height: pxTo(80, ds.get('type.baseFontSize'), 'rem'),
-        display: 'none',
+        display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -78,9 +78,6 @@ const rules = {
         },
         '> div:last-child': {
           marginLeft: pxTo(20, ds.get('type.baseFontSize'), 'rem'),
-        },
-        '@media (min-width: 768px)': {
-          display: 'flex',
         },
     }),
 }

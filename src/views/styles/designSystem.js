@@ -51,6 +51,8 @@ export const tokens = {
       '3xl': 24,
       '4xl': 28,
       '5xl': 32,
+      '6xl': 40,
+      '7xl': 50,
 
       buttons: {
         xs: 11,

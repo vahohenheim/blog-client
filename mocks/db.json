@@ -1,0 +1,52 @@
+{
+    "articles": [
+        {
+          "id": 1,
+          "title": "Lorem ipsum sit dolor amet retazer #1",
+          "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+          "imageAlt": "efcer",
+          "date": "28 Jan. 2019",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat eros risus, ac accumsan ligula feugiat nec. Aenean rhoncus nulla vel urna viverra suscipit. Sed neque nisl, auctor et consectetur scelerisque, laoreet nec velit. Donec sed porttitor nisi, sit amet sagittis felis. In sed neque id risus posuere placerat eu in turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida magna a dolor ultricies, quis molestie mi lacinia. Morbi eu odio dapibus, feugiat lacus nec, cursus nibh. Aenean ut urna blandit, egestas velit non, tempus lorem. Praesent suscipit at dui vitae fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse aliquam libero nec condimentum pretium. Integer sagittis sapien et sodales rutrum. Curabitur at neque id augue scelerisque blandit ac at tortor. Quisque faucibus ornare nibh a convallis. Nam ultricies justo fermentum leo suscipit, at facilisis tellus tempor. Aliquam eu ligula leo. Donec bibendum quis ipsum sit amet eleifend. Praesent volutpat consequat metus, at scelerisque risus sagittis id. Fusce efficitur nunc et quam viverra accumsan.",
+          "tags": [
+            "technology",
+            "new"
+          ]
+        },
+        {
+            "id": 2,
+            "title": "Lorem ipsum sit dolor amet retazer #1",
+            "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+            "imageAlt": "efcer",
+            "date": "28 Jan. 2019",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat eros risus, ac accumsan ligula feugiat nec. Aenean rhoncus nulla vel urna viverra suscipit. Sed neque nisl, auctor et consectetur scelerisque, laoreet nec velit. Donec sed porttitor nisi, sit amet sagittis felis. In sed neque id risus posuere placerat eu in turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida magna a dolor ultricies, quis molestie mi lacinia. Morbi eu odio dapibus, feugiat lacus nec, cursus nibh. Aenean ut urna blandit, egestas velit non, tempus lorem. Praesent suscipit at dui vitae fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse aliquam libero nec condimentum pretium. Integer sagittis sapien et sodales rutrum. Curabitur at neque id augue scelerisque blandit ac at tortor. Quisque faucibus ornare nibh a convallis. Nam ultricies justo fermentum leo suscipit, at facilisis tellus tempor. Aliquam eu ligula leo. Donec bibendum quis ipsum sit amet eleifend. Praesent volutpat consequat metus, at scelerisque risus sagittis id. Fusce efficitur nunc et quam viverra accumsan.",
+            "tags": [
+              "technology",
+              "new"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Lorem ipsum sit dolor amet retazer #1",
+            "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+            "imageAlt": "efcer",
+            "date": "28 Jan. 2019",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat eros risus, ac accumsan ligula feugiat nec. Aenean rhoncus nulla vel urna viverra suscipit. Sed neque nisl, auctor et consectetur scelerisque, laoreet nec velit. Donec sed porttitor nisi, sit amet sagittis felis. In sed neque id risus posuere placerat eu in turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida magna a dolor ultricies, quis molestie mi lacinia. Morbi eu odio dapibus, feugiat lacus nec, cursus nibh. Aenean ut urna blandit, egestas velit non, tempus lorem. Praesent suscipit at dui vitae fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse aliquam libero nec condimentum pretium. Integer sagittis sapien et sodales rutrum. Curabitur at neque id augue scelerisque blandit ac at tortor. Quisque faucibus ornare nibh a convallis. Nam ultricies justo fermentum leo suscipit, at facilisis tellus tempor. Aliquam eu ligula leo. Donec bibendum quis ipsum sit amet eleifend. Praesent volutpat consequat metus, at scelerisque risus sagittis id. Fusce efficitur nunc et quam viverra accumsan.",
+            "tags": [
+              "technology",
+              "new"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Lorem ipsum sit dolor amet retazer #1",
+            "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+            "imageAlt": "efcer",
+            "date": "28 Jan. 2019",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat eros risus, ac accumsan ligula feugiat nec. Aenean rhoncus nulla vel urna viverra suscipit. Sed neque nisl, auctor et consectetur scelerisque, laoreet nec velit. Donec sed porttitor nisi, sit amet sagittis felis. In sed neque id risus posuere placerat eu in turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida magna a dolor ultricies, quis molestie mi lacinia. Morbi eu odio dapibus, feugiat lacus nec, cursus nibh. Aenean ut urna blandit, egestas velit non, tempus lorem. Praesent suscipit at dui vitae fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse aliquam libero nec condimentum pretium. Integer sagittis sapien et sodales rutrum. Curabitur at neque id augue scelerisque blandit ac at tortor. Quisque faucibus ornare nibh a convallis. Nam ultricies justo fermentum leo suscipit, at facilisis tellus tempor. Aliquam eu ligula leo. Donec bibendum quis ipsum sit amet eleifend. Praesent volutpat consequat metus, at scelerisque risus sagittis id. Fusce efficitur nunc et quam viverra accumsan.",
+            "tags": [
+              "technology",
+              "new"
+            ]
+        }
+      ]
+  }

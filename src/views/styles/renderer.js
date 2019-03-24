@@ -32,7 +32,8 @@ export default () => {
       margin: '0 auto',
       minHeight: '100vh',
       fontSize: '1rem',
-      backgroundColor: process.env.NODE_ENV !== 'storybook' ? ds.brand('greyLight') : '',
+      backgroundColor: process.env.NODE_ENV !== 'storybook' ? ds.brand('white') : '',
+      color: ds.brand('magneticBlack'),
     },
     'body',
   )

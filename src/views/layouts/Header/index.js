@@ -15,12 +15,14 @@ import { NavLink } from 'react-router-dom'
 const Header = ({ styles }) => (
   <header className={styles.header}>
     <Container className={styles.container}>
-        <div className={styles.imgWrapper}>
-          <NavLink to="/" exact>
-            <Icon name="logo-origin" className={styles.logo} /> 
-          </NavLink>
+        <div>
+          <div className={styles.imgWrapper}>
+            <NavLink to="/" exact>
+              <Icon name="logo-origin" className={styles.logo} /> 
+            </NavLink>
+          </div>
+          <Navbar/>
         </div>
-        <Navbar/>
     </Container>
   </header>
 )
@@ -35,14 +37,16 @@ const rules = {
     color: ds.brand('greyDarker'),
   }),
   container: () => ({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
     height: pxTo(70, ds.get('type.baseFontSize'), 'rem'),
     margin: '0 auto',
     maxWidth: '100%',
-    padding: `0 ${pxTo(ds.get('layout.gutter') / 2, ds.get('type.baseFontSize'), 'rem')}`,
+    '> div': {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: `0 ${pxTo(8, ds.get('type.baseFontSize'), 'rem')}`,
+    }
   }),
   imgWrapper: () => ({
     height: '100%',

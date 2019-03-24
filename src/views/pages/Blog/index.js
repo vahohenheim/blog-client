@@ -1,4 +1,10 @@
+// define
 import React, { PureComponent, Fragment } from 'react'
+import { Grid, Row, Col } from 'react-flexbox-grid'
+// childs
+import Container from 'views/components/presentationals/Container'
+import ListArticles from 'views/components/smarts/ListArticles'
+import Heading from 'views/components/presentationals/Heading'
 
 class Blog extends PureComponent {
   
@@ -6,9 +12,20 @@ class Blog extends PureComponent {
 
     return (
       <Fragment>
-          <p>Blog</p>
-
-        
+          <Container>
+            <Grid>
+              <Row>
+                <Col xs={12}>
+                    <Heading number="1">
+                      Blog
+                    </Heading>
+                </Col>
+                <Col xs={12}>
+                    <ListArticles/>
+                </Col>
+              </Row>
+            </Grid>
+          </Container>
       </Fragment>
     )
   }
