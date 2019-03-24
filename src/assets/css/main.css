@@ -1,4 +1,58 @@
-.App {
-    margin: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+@import-normalize;
+
+/*
+    CUSTOM FONTS DECLARATION
+*/
+/* stylelint-disable */
+@font-face {
+  font-family: 'InterUI';
+  font-path: './../fonts/Inter-UI-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterUI';
+  font-path: './../fonts/Inter-UI-Bold';
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'system';
+  font-style: normal;
+  font-weight: 400;
+  src: local('.SFNSText-Regular'), local('.HelveticaNeueDeskInterface-Regular'), local('.LucidaGrandeUI'),
+    local('Segoe UI'), local('Ubuntu'), local('Roboto-Regular'), local('DroidSans'), local('Tahoma');
+}
+
+@font-face {
+  font-family: 'system';
+  font-style: normal;
+  font-weight: 500;
+  src: local('.SFNSText-Medium'), local('.HelveticaNeueDeskInterface-MediumP4'), local('.LucidaGrandeUI'),
+    local('Segoe UI Semibold'), local('Ubuntu Medium'), local('Roboto-Medium'), local('DroidSans-Bold'),
+    local('Tahoma Bold');
+}
+
+@font-face {
+  font-family: 'system';
+  font-style: normal;
+  font-weight: 700;
+  src: local('.SFNSText-Bold'), local('.HelveticaNeueDeskInterface-Bold'), local('.LucidaGrandeUI'),
+    local('Segoe UI Bold'), local('Ubuntu Bold'), local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
+}
+/* stylelint-enable */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: InterUI, system, sans-serif;
+}

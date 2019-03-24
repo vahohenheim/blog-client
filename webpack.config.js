@@ -73,7 +73,7 @@ module.exports = {
       },
       // SVG
       {
-        test: /img(\/|\\).*\.svg$/,
+        test: /images(\/|\\).*\.svg$/,
         use: [
           {
             loader: 'svg-loader',
@@ -93,7 +93,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     watchContentBase: true,
-    port: 3000,
+    port: 3210,
     host: '0.0.0.0',
     compress: true,
     historyApiFallback: true,

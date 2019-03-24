@@ -10,9 +10,15 @@ const routes = [
     sitemap: true,
   },
   {
-    path: '/:id',
+    path: '/article/:id',
     name: 'Article',
     component: loadable(() => import('views/pages/Article')),
+    sitemap: true,
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: loadable(() => import('views/pages/Contact')),
     sitemap: true,
   },
 ]
