@@ -1,6 +1,6 @@
 const articles = [
   {
-    "id": 1,
+    "id": "1",
     "title": "Lorem ipsum sit dolor amet retazer #1",
     "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     "imageAlt": "efcer",
@@ -12,7 +12,7 @@ const articles = [
     ]
   },
   {
-      "id": 2,
+      "id": "2",
       "title": "Lorem ipsum sit dolor amet retazer #1",
       "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
       "imageAlt": "efcer",
@@ -24,7 +24,7 @@ const articles = [
       ]
   },
   {
-      "id": 3,
+      "id": "3",
       "title": "Lorem ipsum sit dolor amet retazer #1",
       "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
       "imageAlt": "efcer",
@@ -36,7 +36,7 @@ const articles = [
       ]
   },
   {
-      "id": 4,
+      "id": "4",
       "title": "Lorem ipsum sit dolor amet retazer #1",
       "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
       "imageAlt": "efcer",

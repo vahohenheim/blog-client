@@ -52,6 +52,10 @@ const rules = {
     backgroundColor: ds.brand('white'),
     overflow: 'hidden',
     margin: `${pxTo(10, baseFontSize, 'rem')} 0`,
+    //boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 15px',
+    borderColor: ds.get('colors.borders.fieldsets.default'),
+    borderStyle: ds.get('border.style'),
+    borderWidth: pxTo(ds.get('border.width.fieldsets'), baseFontSize, 'rem'),
   }),
   image: () => ({
     height: pxTo(200, baseFontSize, 'rem'),
@@ -66,7 +70,7 @@ const rules = {
     marginBottom: pxTo(5, baseFontSize, 'rem'),
   }),
   details: () => ({
-    padding: pxTo(15, baseFontSize, 'rem'),
+    padding: `${pxTo(20, baseFontSize, 'rem')} ${pxTo(30, baseFontSize, 'rem')}`,
   }),
   tags: () => ({
     display: 'inline-flex',

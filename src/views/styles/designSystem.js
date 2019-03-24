@@ -126,7 +126,7 @@ export const tokens = {
       },
       listDetails: palette.greyLight,
       fieldsets: {
-        default: palette.greyMedium,
+        default: palette.greyLight, //-----------
       },
     },
     texts: {
@@ -187,7 +187,7 @@ export const tokens = {
     style: 'solid',
     width: {
       inputs: 2,
-      fieldsets: 1,
+      fieldsets: 2,
       buttons: 1,
     },
   },
