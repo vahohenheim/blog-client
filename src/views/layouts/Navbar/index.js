@@ -1,5 +1,5 @@
 // define
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 // connect
 import { connect } from 'react-fela'
@@ -25,20 +25,29 @@ class NavBar extends PureComponent {
                 {
                     type: NavBarLink,
                     props: {
-                    to: '/',
-                    exact: true,
-                    activeClassName: 'active',
+                        to: '/',
+                        exact: true,
+                        activeClassName: 'active',
                     },
-                    children: 'Accueil',
+                    children: 'Home',
                 },
                 {
                     type: NavBarLink,
                     props: {
-                    to: '/article/1',
-                    exact: true,
-                    activeClassName: 'active',
+                        to: '/about',
+                        exact: true,
+                        activeClassName: 'active',
                     },
-                    children: 'Article',
+                    children: 'About',
+                },
+                {
+                    type: NavBarLink,
+                    props: {
+                        to: '/blog',
+                        exact: true,
+                        activeClassName: 'active',
+                    },
+                    children: 'Blog',
                 },
                 {
                     type: NavBarButton,
@@ -52,11 +61,19 @@ class NavBar extends PureComponent {
         )
 
         return (
-            <nav className={styles.nav}>
-                {elements.map((element, index) =>
-                    React.createElement(element.type, { ...element.props, key: index }, element.children || null),
-                )}
-            </nav>
+            <Fragment>
+                <nav className={styles.navDesktop}>
+                    {elements.map((element, index) =>
+                        React.createElement(element.type, { ...element.props, brand: element.brand, key: index }, element.children || null),
+                    )}
+                </nav>
+                <nav className={styles.navMobile}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </nav>
+            </Fragment>
         )
     }
 }
@@ -66,18 +83,38 @@ NavBar.propTypes = {
 }
   
 const rules = {
-    nav: () => ({
-        height: pxTo(80, ds.get('type.baseFontSize'), 'rem'),
+    navDesktop: () => ({
+        height: pxTo(70, ds.get('type.baseFontSize'), 'rem'),
+        display: 'none',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        color: ds.brand('magneticBlack'),
+        '> a button': {
+            marginLeft: pxTo(20, ds.get('type.baseFontSize'), 'rem'),
+        },
+        '> div:last-child': {
+            marginLeft: pxTo(20, ds.get('type.baseFontSize'), 'rem'),
+        },
+        '@media (min-width: 768px)': {
+            display: 'flex',
+        },
+    }),
+    navMobile: () => ({
+        height: pxTo(70, ds.get('type.baseFontSize'), 'rem'),
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         color: ds.brand('magneticBlack'),
         '> a button': {
-          marginLeft: pxTo(20, ds.get('type.baseFontSize'), 'rem'),
+            marginLeft: pxTo(20, ds.get('type.baseFontSize'), 'rem'),
         },
         '> div:last-child': {
-          marginLeft: pxTo(20, ds.get('type.baseFontSize'), 'rem'),
+            marginLeft: pxTo(20, ds.get('type.baseFontSize'), 'rem'),
+        },
+        '@media (min-width: 768px)': {
+            display: 'none',
         },
     }),
 }

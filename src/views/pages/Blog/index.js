@@ -3,8 +3,8 @@ import React, { PureComponent, Fragment } from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 // childs
 import Container from 'views/components/presentationals/Container'
-import ListArticles from 'views/components/smarts/ListArticles'
 import Heading from 'views/components/presentationals/Heading'
+import ListArticles from 'views/components/smarts/ListArticles'
 
 class Blog extends PureComponent {
   

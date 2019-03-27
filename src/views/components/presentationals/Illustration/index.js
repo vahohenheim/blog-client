@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-class Icon extends PureComponent {
+class Illustration extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -46,14 +46,18 @@ class Icon extends PureComponent {
   }
 }
 
-Icon.propTypes = {
+Illustration.propTypes = {
   name: PropTypes.oneOf([
-    'logo-origin',
-    'logo-white',
-    'facebook',
-    'circle',
+    'home',
+    'react',
+    'monitoring',
+    'contact',
+    '404',
+    'art',
+    'process',
+    'interface',
   ]),
   className: PropTypes.string,
 }
 
-export default Icon
+export default Illustration

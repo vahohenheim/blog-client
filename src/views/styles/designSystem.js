@@ -5,6 +5,10 @@ const gradientStop = '#6833cb'
 
 /* eslint-disable no-dupe-keys */
 const palette = {
+  primary: '#B0A89C',
+  secondary: '#C3BAAC',
+  tertiary: '#EDECE8',
+  quaternary: 'white',
   electricBlue: '#007AFF',
   blueNight: '#1F2245',
   magneticBlack: '#494949',
@@ -12,6 +16,8 @@ const palette = {
   gradient: `linear-gradient(to right, ${gradientStart}, ${gradientStop})`,
   progressionGradient: 'linear-gradient(90deg, #007AFF 0%, #F1F2F3 100%)',
   blockGradient: 'linear-gradient(180deg, #FCFCFD 0%, #EFF2F6 100%)',
+  transparentLight: 'rgba(255, 255, 255, 0.2)',
+  transparentLighter: 'rgba(255, 255, 255, 0.8)',
   transparentBlack: 'rgba(0, 0, 0, 0.1)',
   brightOrange: '#FF5C39',
   orange: '#FA983A',
@@ -20,7 +26,7 @@ const palette = {
   greyLighter: '#F7F8FA',
   greyLight: '#F1F2F3',
   greyMedium: '#E8EAEE',
-  grey: '#DBDBDE',
+  grey: '#7D7D7D',
   greyDark: '#ABADC2',
   greyDarker: '#767992',
   greyBlue: '#EFF4FF',
@@ -48,11 +54,12 @@ export const tokens = {
       lg: 15,
       xl: 16,
       '2xl': 18,
-      '3xl': 24,
-      '4xl': 28,
-      '5xl': 32,
-      '6xl': 40,
-      '7xl': 50,
+      '3xl': 22,
+      '4xl': 24,
+      '5xl': 28,
+      '6xl': 34,
+      '7xl': 40,
+      '8xl': 50,
 
       buttons: {
         xs: 11,

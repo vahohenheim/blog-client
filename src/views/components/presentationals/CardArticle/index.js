@@ -26,7 +26,7 @@ const CardDelivery = ({ styles, article }) => {
           <div className={styles.tags}>
             {article.tags.length > 0 && 
               article.tags.map((tag, index) => (
-                <Tag key={index}>{tag}</Tag>
+                <Tag brand="primary" key={index}>{tag}</Tag>
               ))}    
           </div>
           <p className={styles.date}>{article.date}</p>
@@ -49,13 +49,13 @@ const baseFontSize = ds.get('type.baseFontSize')
 const rules = {
   wrapper: () => ({
     borderRadius: pxTo(ds.get('border.radius.fieldsets'), baseFontSize, 'rem'),
-    backgroundColor: ds.brand('white'),
+    backgroundColor: 'transparent',
     overflow: 'hidden',
     margin: `${pxTo(10, baseFontSize, 'rem')} 0`,
-    //boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 15px',
-    borderColor: ds.get('colors.borders.fieldsets.default'),
-    borderStyle: ds.get('border.style'),
-    borderWidth: pxTo(ds.get('border.width.fieldsets'), baseFontSize, 'rem'),
+    // boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 15px',
+    // borderColor: ds.get('colors.borders.fieldsets.default'),
+    // borderStyle: ds.get('border.style'),
+    // borderWidth: pxTo(ds.get('border.width.fieldsets'), baseFontSize, 'rem'),
   }),
   image: () => ({
     height: pxTo(200, baseFontSize, 'rem'),
@@ -70,7 +70,7 @@ const rules = {
     marginBottom: pxTo(5, baseFontSize, 'rem'),
   }),
   details: () => ({
-    padding: `${pxTo(20, baseFontSize, 'rem')} ${pxTo(30, baseFontSize, 'rem')}`,
+    padding: `${pxTo(15, baseFontSize, 'rem')} ${pxTo(8, baseFontSize, 'rem')} `,
   }),
   tags: () => ({
     display: 'inline-flex',
@@ -90,7 +90,7 @@ const rules = {
     display: 'inline-flex',
     margin: `0 ${pxTo(5, baseFontSize, 'rem')}`,
     fontSize: pxTo(ds.get('type.sizes.md'), baseFontSize, 'rem'),
-    color: ds.brand('orange'),
+    color: ds.brand('primary'),
     fontWeight: ds.get('type.fontWeight.bold'),
     letterSpacing: pxTo(.5, baseFontSize, 'rem'),
   }),

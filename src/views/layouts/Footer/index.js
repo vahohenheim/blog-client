@@ -25,11 +25,14 @@ Footer.propTypes = {
 }
 
 const baseFontSize = ds.get('type.baseFontSize')
+
+
 const rules = {
   footer: () => ({
-    backgroundColor: ds.brand('magneticBlack'),
+    backgroundColor: ds.brand('primary'),
     height: pxTo(40, ds.get('type.baseFontSize'), 'rem'),
     color: ds.brand('white'),
+    marginTop: 'auto',
   }),
   container: () => ({
     display: 'flex',
@@ -44,9 +47,10 @@ const rules = {
     display: 'block',
     fontSize: pxTo(ds.get('type.sizes.md'), baseFontSize, 'rem'),
   }),
-  icon: () => ({
+  icon: ({ brand }) => ({
     '> svg': {
-      width: pxTo(20, baseFontSize, 'rem')
+      width: pxTo(20, baseFontSize, 'rem'),
+      fill: ds.brand('white')
     },
   }),
 }

@@ -19,7 +19,7 @@ NavBarButton.propTypes = {
 
 NavBarButton.defaultProps = {
   brand: 'primary',
-  outline: true,
+  outline: false,
 }
 
 export default NavBarButton

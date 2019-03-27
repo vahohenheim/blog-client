@@ -20,24 +20,16 @@ class DetailsArticle extends PureComponent {
     super(props)
 
     this.state = {
-      article: {}
+      article: articles.filter((article) => article.id === this.props.id)[0]
     }
   }
 
   componentDidMount() {
-    if (articles.filter((article) => article.id === this.props.id)) {
-      this.setState({
-        article: articles.filter((article) => article.id === this.props.id)[0]
-      })
-    }
-  }
 
-  componentWillUnmount() {
-    console.log('Aurevoir')
   }
 
   render() {
-    const { styles, id } = this.props
+    const { styles, history } = this.props
     const { article } = this.state
 
     if(article && Object.values(article).length > 0 ) {
@@ -60,7 +52,7 @@ class DetailsArticle extends PureComponent {
                     <div className={styles.tags}>
                       {article.tags.length > 0 && 
                         article.tags.map((tag, index) => (
-                          <Tag key={index}>{tag}</Tag>
+                          <Tag link={true} brand="primary" key={index}>{tag}</Tag>
                         ))}    
                     </div>
                     <p className={styles.date}>{article.date}</p>
@@ -76,22 +68,8 @@ class DetailsArticle extends PureComponent {
         </Fragment>
       )
     } else {
-      return (
-        <Container>
-          <Grid>
-            <Row>
-              <Col xs={12}>
-                <Heading number="1">
-                  Vous semblez perdu...
-                </Heading>
-              </Col>
-              <NavLink to="/">
-                Retourner à l'accueil
-              </NavLink>
-            </Row>
-          </Grid>
-        </Container>
-      )
+      return history.push('/article/not-found')
+     
     }
 
     
@@ -126,7 +104,7 @@ const rules = {
     display: 'inline-flex',
     margin: `0 ${pxTo(5, baseFontSize, 'rem')}`,
     fontSize: pxTo(ds.get('type.sizes.md'), baseFontSize, 'rem'),
-    color: ds.brand('orange'),
+    color: ds.brand('primary'),
     fontWeight: ds.get('type.fontWeight.bold'),
     letterSpacing: pxTo(.5, baseFontSize, 'rem'),
   }),

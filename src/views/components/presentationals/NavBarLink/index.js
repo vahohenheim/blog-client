@@ -16,7 +16,7 @@ const rule = () => ({
   padding: `0 ${pxTo(20, ds.get('type.baseFontSize'), 'rem')}`,
   display: 'flex',
   alignItems: 'center',
-  color: 'currentColor',
+  color: ds.brand('magneticBlack'),
   textDecoration: 'none',
   '&.active': {
     boxShadow: `inset 0 -${pxTo(3, ds.get('type.baseFontSize'), 'rem')} 0 ${ds.brand('skyBlue')}`,

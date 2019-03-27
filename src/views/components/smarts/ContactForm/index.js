@@ -36,19 +36,23 @@ class ContactForm extends PureComponent {
     }
   
     render() {
+      const { styles } = this.props
+
+      const input = {
+        value: '',
+        onChange: () => {}
+      }
+
       return (
-        <form onSubmit={this.handleSubmit}>
-
-          <InputText label="Full name" input={{ label: 'example@glinko.com'}} />
-
-          <InputText label="Email" input={{ label: 'example@glinko.com'}} />
-
-          <InputTextarea label="Message" input={{ label: 'example@glinko.com'}} />
-
-          <Button brand="primary" size="sm" onClick={this.handleSubmit}>
-            Send
-          </Button>
-
+        <form className={styles.form} onSubmit={this.handleSubmit}>
+          <InputText label="Full name" input={input} />
+          <InputText label="Email" input={input} />
+          <InputTextarea label="Message" input={input} />
+          <div className={styles.button}>
+            <Button brand="primary" size="sm" onClick={this.handleSubmit}>
+              Send
+            </Button>
+          </div>
         </form>
       );
     }
@@ -59,11 +63,13 @@ ContactForm.propTypes = {
     
 }
 
-
-const documentBaseFontSize = ds.get('type.baseFontSize')
-
 const rules = () => ({
-  
+  form:() => ({
+    width: '100%',
+  }),
+  button:() => ({
+    textAlign: 'right'
+  })
 })
 
 export default connect(rules)(ContactForm)

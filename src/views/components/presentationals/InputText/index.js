@@ -102,7 +102,7 @@ const rule = () => ({
     top: pxTo(ds.get('spacing.padding.inputs'), documentBaseFontSize, 'rem'),
     color: ds.get('colors.texts.inputs.label'),
   },
-  '& .wrapper input + label:not(.empty)': {
+  '& .wrapper input + label:not(:placeholder-shown)': {
     fontSize: pxTo(ds.get('type.sizes.inputs.default.label'), ds.get('type.baseFontSize'), 'rem'),
     top: pxTo(ds.get('spacing.padding.inputs'), documentBaseFontSize, 'rem'),
     color: ds.get('colors.texts.inputs.label'),

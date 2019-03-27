@@ -3,10 +3,22 @@ import loadable from 'loadable-components'
 const routes = [
   {
     path: '/',
-    name: 'Blog',
-    component: loadable(() => import('views/pages/Blog')),
+    name: 'Home',
+    component: loadable(() => import('views/pages/Home')),
     exact: true,
     display: true,
+    sitemap: true,
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: loadable(() => import('views/pages/About')),
+    sitemap: true,
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: loadable(() => import('views/pages/Blog')),
     sitemap: true,
   },
   {
@@ -19,6 +31,12 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: loadable(() => import('views/pages/Contact')),
+    sitemap: true,
+  },
+  {
+    path: '*',
+    name: 'NoMatch',
+    component: loadable(() => import('views/pages/NoMatch')),
     sitemap: true,
   },
 ]

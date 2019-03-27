@@ -8,11 +8,15 @@ import ds from 'views/styles/designSystem'
 // router
 import { NavLink } from 'react-router-dom'
 
-const Tag = ({ styles, children }) => {
+const Tag = ({ styles, link = false, children }) => {
 
     return (
         <div className={styles.tag}>
+          {link ? (
+          <NavLink to={`/tag/${children}`} exact>
             {children}
+          </NavLink>
+          ): children}
         </div>
       )
 
@@ -28,15 +32,17 @@ const Tag = ({ styles, children }) => {
 Tag.propTypes = {
   styles: PropTypes.object.isRequired,
   children: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  link: PropTypes.bool,
 }
 
 const baseFontSize = ds.get('type.baseFontSize')
 
 const rules = {
-  tag: () => ({
-    backgroundColor: ds.brand('orange'),
+  tag: ({ brand }) => ({
+    backgroundColor: ds.brand(brand),
     borderRadius: pxTo(ds.get('border.radius.buttons'), baseFontSize, 'rem'),
-    padding: pxTo(3, baseFontSize, 'rem'),
+    padding: `${pxTo(3, baseFontSize, 'rem')} ${pxTo(4, baseFontSize, 'rem')}`,
     display: 'inline-flex',
     fontSize: pxTo(ds.get('type.sizes.md'), baseFontSize, 'rem'),
     color: ds.brand('white'),

@@ -19,9 +19,6 @@ class ListArticles extends PureComponent {
   render() {
     const { styles } = this.props
 
-
-
-
     return (
         <Row>
             {articles.length > 0 && 

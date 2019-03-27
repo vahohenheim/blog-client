@@ -14,7 +14,7 @@ const textSizes = {
   lg: pxTo(defaultTextSize, documentBaseFontSize, 'rem'),
 }
 
-const defaultSpacing = pxTo(2, defaultTextSize, 'em')
+const defaultSpacing = pxTo(1, defaultTextSize, 'em')
 const spacing = {
   xs: pxTo(1.7, xsTextSize, 'em'),
   sm: defaultSpacing,
@@ -38,10 +38,10 @@ const padding = {
 }
 
 const background = {
-  primary: ds.brand('orange'),
-  secondary: ds.brand('magneticBlack'),
-  tertiary: ds.brand('greyLight'),
-  quaternary: ds.brand('skyBlue'),
+  primary: ds.brand('primary'),
+  secondary: ds.brand('secondary'),
+  tertiary: ds.brand('tertiary'),
+  quaternary: ds.brand('quaternary'),
   reversed: ds.brand('white'),
   outline: 'transparent',
 }
@@ -49,9 +49,9 @@ const background = {
 const color = {
   primary: ds.brand('white'),
   secondary: ds.brand('white'),
-  tertiary: ds.brand('magneticBlack'),
-  quaternary: ds.brand('white'),
-  outline: ds.brand('orange'),
+  tertiary: ds.brand('primary'),
+  quaternary: ds.brand('primary'),
+  outline: ds.brand('primary'),
 }
 
 const Button = createComponent(
@@ -61,7 +61,6 @@ const Button = createComponent(
     width: block ? '100%' : 'auto',
     minHeight: height[size],
     fontSize: textSizes[size],
-    textTransform: 'uppercase',
     fontWeight: ds.get('type.fontWeight.bold'),
     letterSpacing: spacing[size],
     background:

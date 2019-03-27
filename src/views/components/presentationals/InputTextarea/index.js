@@ -68,16 +68,16 @@ const rule = () => ({
     left: pxTo(ds.get('spacing.padding.inputs'), documentBaseFontSize, 'rem'),
     transition: '0.2s',
     textAlign: 'left',
-    backgroundColor: ds.get('colors.backgrounds.inputs'),
   },
   '& .wrapper textarea': {
     color: ds.get('colors.texts.inputs.value'),
+    backgroundColor: ds.get('colors.backgrounds.inputs'),
     fontFamily: 'inherit',
     borderRadius: pxTo(ds.get('border.radius.inputs'), ds.get('type.baseFontSize'), 'rem'),
     borderColor: ds.get('colors.borders.inputs.default'),
     borderStyle: ds.get('border.style'),
     borderWidth: pxTo(ds.get('border.width.inputs'), ds.get('type.baseFontSize'), 'rem'),
-    minHeight: pxTo(80, documentBaseFontSize, 'rem'),
+    minHeight: pxTo(200, documentBaseFontSize, 'rem'),
     paddingTop: pxTo(30, documentBaseFontSize, 'rem'),
     paddingRight: pxTo(ds.get('spacing.padding.inputs'), documentBaseFontSize, 'rem'),
     paddingLeft: pxTo(ds.get('spacing.padding.inputs'), documentBaseFontSize, 'rem'),
@@ -90,7 +90,7 @@ const rule = () => ({
     top: pxTo(ds.get('spacing.padding.inputs'), documentBaseFontSize, 'rem'),
     color: ds.get('colors.texts.inputs.label'),
   },
-  '& .wrapper textarea + label:not(.empty)': {
+  '& .wrapper textarea + label': {
     fontSize: pxTo(ds.get('type.sizes.inputs.label.value'), documentBaseFontSize, 'rem'),
     top: pxTo(10, documentBaseFontSize, 'rem'),
     color: ds.get('colors.texts.inputs.label'),

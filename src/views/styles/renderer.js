@@ -32,8 +32,6 @@ export default () => {
       margin: '0 auto',
       minHeight: '100vh',
       fontSize: '1rem',
-      backgroundColor: process.env.NODE_ENV !== 'storybook' ? ds.brand('white') : '',
-      color: ds.brand('magneticBlack'),
     },
     'body',
   )
@@ -49,23 +47,18 @@ export default () => {
 
   renderer.renderStatic(
     {
-      fontWeight: ds.get('type.fontWeight.bold'),
+      lineHeight: '140%',
+      opacity: .8,
     },
-    'h1',
+    'p',
   )
 
   renderer.renderStatic(
     {
-      fontWeight: ds.get('type.fontWeight.bold'),
+      overflowY: 'hidden',
+      color: ds.brand('magneticBlack'),
     },
-    'h2',
-  )
-
-  renderer.renderStatic(
-    {
-      fontWeight: ds.get('type.fontWeight.bold'),
-    },
-    'h3',
+    'body',
   )
   return renderer
 }

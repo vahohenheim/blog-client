@@ -33,7 +33,7 @@ Header.propTypes = {
 
 const rules = {
   header: () => ({
-    backgroundColor: ds.brand('white'),
+    backgroundColor: 'transparent',
     color: ds.brand('greyDarker'),
   }),
   container: () => ({
@@ -41,6 +41,7 @@ const rules = {
     margin: '0 auto',
     maxWidth: '100%',
     '> div': {
+      height: '100%',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',

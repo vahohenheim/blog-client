@@ -1,22 +1,28 @@
+// define
 import React, { Component, Fragment } from 'react'
 import {hot} from "react-hot-loader"
+import routes from 'routes'
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom"
+// connect
+import { connect } from 'react-fela'
+import { pxTo } from 'design-system-utils'
+import ds from 'views/styles/designSystem'
+// childs
 import Header from 'views/layouts/Header'
 import Footer from 'views/layouts/Footer'
+// styles
 import 'assets/css/main.css'
-import routes from 'routes'
-import { BrowserRouter as Router, Route } from "react-router-dom"
-import ds from 'views/styles/designSystem'
-import { pxTo } from 'design-system-utils'
 
 class App extends Component{
   render(){
+    const { styles } = this.props
     const documentBaseFontSize = ds.get('type.baseFontSize')
 
     return (
       <Router>
         <Fragment>
           <Header />
-          <div
+          <div 
             style={{
               '--backgroundColor': ds.brand('white'),
               '--color': ds.get('colors.texts.default'),
@@ -28,12 +34,14 @@ class App extends Component{
               '--spacing': pxTo(15, documentBaseFontSize, 'rem'),
             }}
           ></div>
-          <main>
-            {routes.map((route) => (
-              <Route key={route.path} {...route} />
-            ))}
+          <main className={styles.main}>
+            <Switch>
+              {routes.map((route) => (
+                <Route key={route.path} {...route} />
+              ))}
+            </Switch>
           </main>
-          <Footer />
+          <Footer/>
         </Fragment>
       </Router>
     )
@@ -41,4 +49,16 @@ class App extends Component{
   }
 }
 
-export default hot(module)(App);
+
+const rules = {
+  body: () => ({
+    backgroundColor: ds.brand('primary'),
+    color: ds.brand('magneticBlack'),
+  }),
+  main: () => ({
+    height: '100%',
+  }),
+
+}
+
+export default connect(rules)(hot(module)(App))
