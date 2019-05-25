@@ -23,17 +23,17 @@ class Home extends PureComponent {
 
           <Container>
             <Grid>
-              <Row center="md" className={styles.headerWrapper}>
-                <Col xs={10} className={styles.headingWrapper}>
-                    <Illustration name="home" className={styles.illustration}/>
-                </Col>
-                <Col xs={12} md={6} className={styles.contentWrapper}>
+              <Row className={styles.headerWrapper}>
+                <Col xs={6} md={6}>
                   <Heading number="1" className={styles.heading}>
                     Learn to make wonderfull
                   </Heading>
                   <p className={styles.content}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                   </p>
+                </Col>
+                <Col xs={6}>
+                    <Illustration name="home" className={styles.illustration}/>
                 </Col>
               </Row>
             </Grid>
@@ -109,14 +109,13 @@ Home.propTypes = {
 const baseFontSize = ds.get('type.baseFontSize')
 const rules = {
   headerWrapper: () => ({
-    position: 'relative',
-    height: '100%',
+    height: 'calc(100vh - 70px)',
+    display: 'flex',
+    alignItems: 'center',
+    zIndex: '2'
   }),
   headingWrapper: () => ({
-
-    '@media (min-width: 768px)': {
-
-    },
+    
   }),
   contentWrapper: () => ({
     margin: '0 auto',
@@ -130,6 +129,7 @@ const rules = {
   }),
   illustration: () => ({
     '> svg': {
+      height: '100%',
       width: '100%',
       zIndex:' -1',
     },
