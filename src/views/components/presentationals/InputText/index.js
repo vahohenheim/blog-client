@@ -4,6 +4,9 @@ import { createComponentWithProxy } from 'react-fela'
 import ds from 'views/styles/designSystem'
 import { pxTo } from 'design-system-utils'
 
+import InputAnt from 'antd/lib/input';
+import 'antd/lib/input/style';
+
 const InputText = ({
   input,
   type,
@@ -126,4 +129,9 @@ const rule = () => ({
   },
 })
 
-export default createComponentWithProxy(rule, InputText)
+const Input = ({ size, brand, block, reversed, outline }) => (
+  <InputAnt allowClear size="large" placeholder="Basic usage" />
+)
+
+
+export default Input

@@ -1,7 +1,10 @@
+import React from 'react'
 import ds from 'views/styles/designSystem'
 import { pxTo } from 'design-system-utils'
 import { createComponent } from 'react-fela'
 import PropTypes from 'prop-types'
+import ButtonAntd from 'antd/lib/button'
+import 'antd/lib/button/style';
 
 const documentBaseFontSize = ds.get('type.baseFontSize')
 const xsTextSize = ds.get('type.sizes.buttons.xs')
@@ -54,7 +57,7 @@ const color = {
   outline: ds.brand('primary'),
 }
 
-const Button = createComponent(
+const ButtonBlank = createComponent(
   ({ size, brand, block, reversed, outline }) => ({
     textAlign: 'center',
     padding: padding[size],
@@ -166,6 +169,10 @@ const Button = createComponent(
   }),
   'button',
   ['onClick', 'size', 'brand', 'disabled', 'reversed', 'type'],
+)
+
+const Button = ({ size, brand, block, reversed, outline }) => (
+  <ButtonAntd type={brand}>Primary</ButtonAntd>
 )
 
 Button.defaultProps = {

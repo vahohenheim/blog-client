@@ -14,6 +14,8 @@ import Button from 'views/components/presentationals/Button'
 import Heading from 'views/components/presentationals/Heading'
 import Tag from 'views/components/presentationals/Tag'
 
+import InputAnt from 'antd/lib/input';
+
 
 class ContactForm extends PureComponent {
     constructor(props) {
@@ -45,14 +47,16 @@ class ContactForm extends PureComponent {
 
       return (
         <form className={styles.form} onSubmit={this.handleSubmit}>
-          <InputText label="Full name" input={input} />
-          <InputText label="Email" input={input} />
-          <InputTextarea label="Message" input={input} />
-          <div className={styles.button}>
-            <Button brand="primary" size="sm" onClick={this.handleSubmit}>
-              Send
-            </Button>
-          </div>
+          <InputAnt.Group>
+            <InputText label="Full name" input={input} />
+              <InputText label="Email" input={input} />
+              <InputTextarea label="Message" input={input} />
+              <div className={styles.button}>
+                <Button brand="primary" size="sm" onClick={this.handleSubmit}>
+                  Send
+                </Button>
+              </div>
+          </InputAnt.Group>
         </form>
       );
     }

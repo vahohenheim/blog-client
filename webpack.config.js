@@ -19,7 +19,9 @@ module.exports = {
         test: /\.js$/,
         exclude: excludedFolders,
         loader: 'babel-loader',
-        options: { presets: ["@babel/env"] }
+        options: { 
+          presets: ["@babel/env"]
+        }
       },
       // CSS
       {
@@ -34,6 +36,20 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader',
         include: [/flexboxgrid/, /react-times/, /react-day-picker/],
+      },
+      // Less
+      {
+        test: /\.less$/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS
+        }, {
+          loader: 'less-loader', // compiles Less to CSS
+          options: {
+            javascriptEnabled: true,
+          },
+        }],
       },
       // Fonts
       {

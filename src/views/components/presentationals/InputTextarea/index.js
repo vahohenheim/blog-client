@@ -4,6 +4,10 @@ import { createComponentWithProxy } from 'react-fela'
 import ds from 'views/styles/designSystem'
 import { pxTo } from 'design-system-utils'
 
+import InputAnt from 'antd/lib/input';
+const { TextArea } = InputAnt;
+
+
 const InputTextarea = ({ input, type, label, meta: { touched, error, warning }, className, children, ...props }) => (
   <div className={[className].concat(touched && error ? 'has-errors' : []).join(' ')}>
     <div className="wrapper">
@@ -110,4 +114,15 @@ const rule = () => ({
   },
 })
 
-export default createComponentWithProxy(rule, InputTextarea)
+
+//export default createComponentWithProxy(rule, InputTextarea)
+
+
+const TextAreaAnt = ({ size, brand, block, reversed, outline }) => (
+  <TextArea
+      placeholder="Autosize height with minimum and maximum number of lines"
+      autosize={{ minRows: 4, maxRows: 12 }}
+    />
+)
+
+export default TextAreaAnt

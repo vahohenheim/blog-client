@@ -52,10 +52,13 @@ const rules = {
     backgroundColor: 'transparent',
     overflow: 'hidden',
     margin: `${pxTo(10, baseFontSize, 'rem')} 0`,
-    // boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 15px',
+    transition: 'all .3s ease-in',
     // borderColor: ds.get('colors.borders.fieldsets.default'),
     // borderStyle: ds.get('border.style'),
     // borderWidth: pxTo(ds.get('border.width.fieldsets'), baseFontSize, 'rem'),
+    ':hover':{
+      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 15px',
+    }
   }),
   image: () => ({
     height: pxTo(200, baseFontSize, 'rem'),
@@ -70,7 +73,7 @@ const rules = {
     marginBottom: pxTo(5, baseFontSize, 'rem'),
   }),
   details: () => ({
-    padding: `${pxTo(15, baseFontSize, 'rem')} ${pxTo(8, baseFontSize, 'rem')} `,
+    padding: `${pxTo(15, baseFontSize, 'rem')} ${pxTo(16, baseFontSize, 'rem')} `,
   }),
   tags: () => ({
     display: 'inline-flex',
@@ -81,7 +84,6 @@ const rules = {
   title: () => ({
     '> h2': {
       display: 'block',
-      height: pxTo(50, baseFontSize, 'rem'),
       overflow: 'hidden',
       margin: `0 0 ${pxTo(10, baseFontSize, 'rem')} 0`,
     }
@@ -98,8 +100,6 @@ const rules = {
     '> p': {
       display: 'block',
       width: '1OO%',
-      height: pxTo(50, baseFontSize, 'rem'),
-      overflow: 'hidden',
       margin: 0
       },
     }),
